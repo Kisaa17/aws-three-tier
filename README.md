@@ -9,7 +9,7 @@ This project involved building a three-tier web application on AWS. The architec
 The goal was to create a fully functioning web app that connects these services securely and efficiently.
 
  
-
+!(./images/architecture.png)
 ________________________________________
 
 Key Steps and Concepts Covered
@@ -23,21 +23,26 @@ o	Using CloudFront domain for site access
 o	Defining a REST API in API Gateway
 o	Connecting API Gateway to Lambda using proxy integration
 o	Writing Lambda code to fetch data from DynamoDB
- 
- 
+!(./images/lambda-function.png) 
+!(./images/get-methode.png)
+
 4.	Handling CORS (Cross-Origin Resource Sharing)
 o	Enabling CORS in API Gateway to allow requests from the CloudFront domain
 o	Adding CORS headers (Access-Control-Allow-Origin) in Lambda response
 o	Troubleshooting common CORS errors (including the trailing slash issue)
- 
+!(./images/cors_error.png)
+
 5.	Deploying API and Lambda Updates
 o	Deploying API changes to the prod stage
 o	Redeploying Lambda function after code changes
- 
+!(./images/deploy-api.png) 
+
 6.	Testing Final Setup
 o	Accessing the site via CloudFront URL
 o	Testing user data retrieval from DynamoDB via the API
 o	Validating CORS policies and API connectivity
+!(./images/successfull-retrieved-data.png) 
+
  ________________________________________
 Challenges and Solutions
 •	CORS Errors:
