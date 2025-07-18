@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Three-Tier Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AWS Three-Tier Application</h1>
+            <p>Enter a User ID to retrieve user data from DynamoDB</p>
+        </header>
+        
+        <main>
+            <div class="search-section">
+                <div class="input-group">
+                    <input type="text" id="searchInput" placeholder="Enter User ID (e.g., user123)" maxlength="100">
+                    <button id="searchButton" onclick="searchData()">Search</button>
+                </div>
+            </div>
+            
+            <div class="results-section">
+                <div id="loadingIndicator" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Searching...</p>
+                </div>
+                
+                <div id="resultsContainer" class="results hidden">
+                    <h3>Results:</h3>
+                    <div id="resultsContent"></div>
+                </div>
+                
+                <div id="errorContainer" class="error hidden">
+                    <h3>Error:</h3>
+                    <p id="errorMessage"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
